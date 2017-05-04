@@ -1,0 +1,8 @@
+{
+  "name": "spa-2017-sandbox",
+  "version": "1.0.0",
+  "description": "SPA 2017 sandbox",
+  "main": "index.js",
+  "author": "jigsaw (http://jgs.me)",
+  "license": "MIT"
+}
