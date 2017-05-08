@@ -1,8 +1,31 @@
 {
+  "private": true,
   "name": "spa-2017-sandbox",
-  "version": "1.0.0",
   "description": "SPA 2017 sandbox",
-  "main": "index.js",
   "author": "jigsaw (http://jgs.me)",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node lib/index.js",
+    "build:client": "webpack --config webpack.config.client.js",
+    "build:server": "webpack --config webpack.config.server.js"
+  },
+  "dependencies": {
+    "babel-loader": "^7.0.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-pug-to-react": "^0.5.0",
+    "escape-html": "^1.0.3",
+    "immutable": "^3.8.1",
+    "node-static": "^0.7.9",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "next",
+    "redux": "^3.6.0",
+    "redux-frr": "^0.4.0",
+    "redux-logger": "^3.0.1",
+    "redux-thunk": "^2.2.0",
+    "webpack": "^2.5.0"
+  }
 }
