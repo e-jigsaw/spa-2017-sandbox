@@ -5,7 +5,8 @@ const filename = '[name].js'
 module.exports = {
   entry: {
     common: [
-      'react', 'react-dom', 'react-redux', 'redux', 'redux-frr', 'immutable'
+      'react', 'react-dom', 'react-redux', 'redux', 'redux-frr', 'immutable',
+      'react-router-dom', 'react-router-redux'
     ],
     index: './src/client/index.js'
   },

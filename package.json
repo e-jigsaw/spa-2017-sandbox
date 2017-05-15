@@ -17,6 +17,7 @@
     "escape-html": "^1.0.3",
     "immutable": "^3.8.1",
     "node-static": "^0.7.9",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
@@ -26,6 +27,6 @@
     "redux-frr": "^0.4.0",
     "redux-logger": "^3.0.1",
     "redux-thunk": "^2.2.0",
-    "webpack": "^2.5.0"
+    "webpack": "^2.5.1"
   }
 }
