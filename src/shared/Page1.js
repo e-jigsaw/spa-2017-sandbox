@@ -2,7 +2,6 @@ import {Record} from 'immutable'
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import PropTypes from 'prop-types'
 
 class Page1Domain extends Record({
   kind: 'Page1',
@@ -14,8 +13,7 @@ class Page1Component extends Component {
     if (this.props.Page1 === undefined) {
       this.props.dispatch({
         type: 'system/addDomain',
-        Domain: Page1Domain,
-        store: this.context.store
+        Domain: Page1Domain
       })
     }
   }
@@ -32,10 +30,6 @@ class Page1Component extends Component {
       return null
     }
   }
-}
-
-Page1Component.contextTypes = {
-  store: PropTypes.object
 }
 
 export default connect(

@@ -5,7 +5,8 @@
   "author": "jigsaw (http://jgs.me)",
   "license": "MIT",
   "scripts": {
-    "start": "node lib/index.js",
+    "start": "PORT=9999 node lib/index.js",
+    "serve": "static -p 9998 build/",
     "build:client": "webpack --config webpack.config.client.js",
     "build:server": "webpack --config webpack.config.server.js"
   },

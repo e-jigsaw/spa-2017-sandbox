@@ -6,14 +6,16 @@ import thunkMiddleware from 'redux-thunk'
 
 export const history = createHistory()
 let reducers = {
-  router: routerReducer
+  router: routerReducer,
+  store: (state = null, action) =>
+    action.type === 'system/injectStore' ? action.store : state
 }
 
 export default
   applyMiddleware(
     thunkMiddleware,
     routerMiddleware(history),
-    store => next => action => {
+    ({getState}) => next => action => {
       if (action.type === 'system/addDomain') {
         const payload = new action.Domain()
         reducers = Object.assign({}, reducers, {
@@ -29,7 +31,7 @@ export default
             }
           }
         })
-        action.store.replaceReducer(combineReducers(reducers))
+        getState().store.replaceReducer(combineReducers(reducers))
         return next({
           type: 'system/initDomain',
           payload
